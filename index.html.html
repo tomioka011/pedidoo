@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pedido Especial</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #FFC0CB; /* Cor de fundo rosa */
+        margin: 0;
+        padding: 0;
+    }
+    .conteudo {
+        background-color: rgba(255, 255, 255, 0.7); /* Fundo semi-transparente branco */
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px auto;
+        max-width: 400px;
+    }
+    .conteudo label {
+        font-size: 20px;
+    }
+    .conteudo input[type="text"] {
+        padding: 8px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin-top: 5px;
+    }
+    .conteudo button {
+        padding: 10px 20px;
+        font-size: 18px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+    .conteudo button:hover {
+        background-color: #45a049;
+    }
+    .coracoes {
+        font-size: 24px;
+    }
+    #mensagemEspecial {
+        font-size: 18px;
+        margin-top: 20px;
+    }
+    #linkYoutube {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+</style>
+</head>
+<body>
+
+<div class="conteudo" id="login">
+    <label for="nome">Digite seu nome:</label><br>
+    <input type="text" id="nome"><br>
+    <button onclick="verificarNome()">Entrar</button>
+</div>
+
+<div class="conteudo" id="conteudo" style="display: none;">
+    <span class="coracoes">&#10084;&#65039;&#10084;&#65039;&#10084;&#65039;</span>
+    <h2 id="frase">Me da o cuzinho amor pfvr...</h2>
+    <p>Escolha uma opção:</p>
+    <button onclick="escolhaSim()">Sim</button>
+    <button onclick="naoFazerNada()">Não</button>
+    <p id="mensagemEspecial" style="display:none;">Aguardo ansiosamente pelo fim de semana. <a id="linkYoutube" href="https://youtu.be/UEBl8cqh56k?si=UoOfYnkCV11R2-6G" target="_blank">Assista no YouTube</a></p>
+</div>
+
+<script>
+function verificarNome() {
+    var nomeDigitado = document.getElementById("nome").value.trim().toLowerCase();
+    var nomeCorreto = "aninha-do-lipe"; // Nome correto: "aninha-do-lipe"
+
+    if (nomeDigitado === nomeCorreto) {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("conteudo").style.display = "block";
+    } else {
+        alert("Nome incorreto. Tente novamente.");
+    }
+}
+
+function escolhaSim() {
+    // Exibir mensagem especial
+    document.getElementById("mensagemEspecial").style.display = "block";
+}
+
+function naoFazerNada() {
+    // Não faz nada, apenas mantém a página como está
+}
+</script>
+
+</body>
+</html>
+
+
+
+
